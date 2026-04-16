@@ -6,8 +6,9 @@ This project simulates a blocking cache controller finite state machine (FSM) us
 - A direct-mapped cache with write-back and write-allocate policy
 - A simple main memory that never misses and takes 2 cycles to read or write blocks
 
-
 ## FSM States (22 states, matching fsm_diagram.md)
+
+Note: The diagram in `fsm_diagram.md` uses Mermaid. If your Markdown preview does not render Mermaid diagrams, install a Mermaid-capable preview extension (for example, Markdown Preview Mermaid Support in VS Code).
 
 ```
 IDLE → COMPARE_TAG → READ_HIT / WRITE_HIT / MISS
@@ -52,8 +53,8 @@ make
 
 ### Windows (MinGW)
 
-**🚨 IMPORTANT FOR WINDOWS USERS:** If you are using MinGW, the standard `make` command will usually result in an error like `'make' is not recognized`. 
-MinGW installs it as `mingw32-make` instead. 
+**🚨 IMPORTANT FOR WINDOWS USERS:** If you are using MinGW, the standard `make` command will usually result in an error like `'make' is not recognized`.
+MinGW installs it as `mingw32-make` instead.
 
 **You must use `mingw32-make` instead of `make` for all commands in this README.**
 
@@ -122,7 +123,6 @@ Both hexadecimal (`0x...`) and decimal addresses are accepted.
 --cache-lines <N>    Number of cache lines (default: 4)
 --help               Show usage
 ```
-
 
 ## Output
 
