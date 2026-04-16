@@ -1,0 +1,8 @@
+# Full coverage workload: read miss/hit, write hit, write miss, dirty writeback, and subsequent read
+R 0x00
+R 0x00
+W 0x00 777
+R 0x04
+W 0x08 888
+W 0x08 999
+R 0x0C

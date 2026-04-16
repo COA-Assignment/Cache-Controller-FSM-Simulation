@@ -1,0 +1,19 @@
+Cache Controller FSM Simulation Summary
+=====================================
+Cache lines: 4
+Memory latency: 2 cycles (fixed, per FSM diagram)
+
+Requests loaded: 6
+Total cycles: 37
+Reads: 4
+Writes: 2
+Hits: 5
+Misses: 1
+Writebacks: 0
+Hit rate: 83.33%
+
+Final cache state:
+Line 0: valid=1, dirty=1, tag=0, data=222
+Line 1: valid=0, dirty=0, tag=0, data=0
+Line 2: valid=0, dirty=0, tag=0, data=0
+Line 3: valid=0, dirty=0, tag=0, data=0

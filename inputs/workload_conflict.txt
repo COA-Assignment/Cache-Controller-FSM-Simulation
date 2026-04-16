@@ -1,0 +1,24 @@
+# Conflict-miss workload: uses multiple cache lines, then causes evictions
+# With 4 cache lines: addr 0->line 0, addr 1->line 1, addr 2->line 2, addr 3->line 3
+# addr 4->line 0 (conflict), addr 5->line 1 (conflict)
+
+# Phase 1: Fill all 4 cache lines (compulsory misses)
+R 0
+R 1
+R 2
+R 3
+
+# Phase 2: Read hits on all 4 lines
+R 0
+R 1
+R 2
+R 3
+
+# Phase 3: Write to line 0 (write hit, makes it dirty)
+W 0 500
+
+# Phase 4: Read addr 4 -> maps to line 0 -> dirty eviction of addr 0, then allocate
+R 4
+
+# Phase 5: Read addr 5 -> maps to line 1 -> clean eviction of addr 1, then allocate
+R 5

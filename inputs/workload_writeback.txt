@@ -1,0 +1,7 @@
+# Writeback-focused workload: force dirty eviction on same index
+W 0x00 100
+W 0x04 200
+W 0x08 300
+W 0x0C 400
+R 0x00
+R 0x10

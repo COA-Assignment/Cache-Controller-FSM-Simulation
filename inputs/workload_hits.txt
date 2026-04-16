@@ -1,0 +1,7 @@
+# Hit-heavy workload after first compulsory miss on each line
+R 0x00
+R 0x00
+W 0x00 111
+R 0x00
+W 0x00 222
+R 0x00
