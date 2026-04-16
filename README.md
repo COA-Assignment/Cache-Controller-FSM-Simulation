@@ -147,4 +147,4 @@ make run-all
 # Windows users: mingw32-make run-all
 ```
 
-This produces trace CSVs and summary files in `outputs/reference/` for all 4 workloads.
+This produces trace CSVs and summary files in `outputs/reference/` for all 4 workloads
